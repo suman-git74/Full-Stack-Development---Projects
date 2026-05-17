@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket FanCode</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" id="about-link">About</a>
+            <a href="#" id="share-link">Share</a>
+        </nav>
+        <nav>
+            <a href="#" id="leaderboard-link">Leaderboard</a>
+        </nav>
+    </header>
+
+    <main>
+        <img src="CF logo.png" alt="Cricket FanCode Logo" id="game-logo">
+        <h1>Let's play Cricket!</h1>
+
+        <div id="setup-area" class="search-box">
+            <span class="man">🙎</span>
+            <input type="text" id="player-name-input" placeholder="Enter Name & Start">
+            <span class="voice-icon">🎙️</span>
+        </div>
+
+        <div id="setup-buttons" class="buttons">
+            <button id="start-game-btn">Start</button>
+            <button id="home-reset-btn">reset</button>
+        </div>
+
+        <div id="game-area" style="display: none; text-align: center;">
+            <h2 id="welcome-message">Good luck!</h2>
+            
+            <div class="score-board">
+                <p><span id="display-player-name">Player</span>: <span id="player-score">0</span></p>
+                <p>Computer: <span id="computer-score">0</span></p>
+            </div>
+
+            <div class="game-choices">
+                <div class="choice-card" onclick="playRound('bat')">
+                    <span class="choice-icon">🏏</span>
+                    <span class="choice-label">BAT</span>
+                </div>
+                <div class="choice-card" onclick="playRound('ball')">
+                    <span class="choice-icon">⚾</span>
+                    <span class="choice-label">BALL</span>
+                </div>
+                <div class="choice-card" onclick="playRound('stump')">
+                    <span class="choice-icon" id="stump-rendering-target">🪘</span>
+                    <span class="choice-label">STUMP</span>
+                </div>
+            </div>
+
+            <div id="round-result"></div>
+            
+            <div class="buttons">
+                <button id="reset-game-btn">Reset Game</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-links">
+            <div class="left-links">
+                <a href="#" id="advertising-link">Advertising</a>
+                <a href="#" id="how-it-works-link">How Game works</a>
+            </div>
+            <div class="right-links">
+                <a href="#" id="privacy-link">Privacy</a>
+                <a href="#" id="terms-link">Terms</a>
+                <a href="#" id="settings-link">Settings</a>
+            </div>
+        </div>
+        <hr>
+        <div class="right-links">
+            <p>&copy; 2026 Cricket Game. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="game-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modal-body-content"></div>
+        </div>
+    </div>
+
+    <script src="Game.js"></script>
+</body>
+</html>
